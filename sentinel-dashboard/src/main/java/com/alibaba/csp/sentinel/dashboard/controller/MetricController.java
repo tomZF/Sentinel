@@ -79,7 +79,7 @@ public class MetricController {
             endTime = System.currentTimeMillis();
         }
         if (startTime == null) {
-            startTime = endTime - 1000 * 60 * 5;
+            startTime = endTime - 1000 * 60 * 15;
         }
         if (endTime - startTime > maxQueryIntervalMs) {
             return Result.ofFail(-1, "time intervalMs is too big, must <= 1h");
@@ -148,7 +148,7 @@ public class MetricController {
             endTime = System.currentTimeMillis();
         }
         if (startTime == null) {
-            startTime = endTime - 1000 * 60;
+            startTime = endTime - 1000 * 60 * 5;
         }
         if (endTime - startTime > maxQueryIntervalMs) {
             return Result.ofFail(-1, "time intervalMs is too big, must <= 1h");
